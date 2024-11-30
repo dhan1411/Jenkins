@@ -12,11 +12,11 @@ stages {
 stage ("Terraform") {
 
      agent {
-node {
-         label "built-in"
-         customWorkspace "/mnt/Terraform"
-}
-}
+           node {
+                 label "built-in"
+                 customWorkspace "/mnt/Terraform"
+                }
+            }
 
 steps {
       sh """ terraform init
