@@ -13,8 +13,8 @@ stage ("Terraform") {
 
      agent {
            node {
-                 label "built-in"
-                 customWorkspace "/mnt/Terraform"
+                 label 'built-in'
+                 customWorkspace '/mnt/Terraform'
                 }
             }
 
