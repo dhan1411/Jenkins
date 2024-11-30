@@ -1,6 +1,6 @@
 pipeline {
 
-agent none
+agent any
 
 environment {
 
@@ -10,13 +10,6 @@ environment {
 stages {
 
 stage ("Terraform") {
-
-     agent {
-           node {
-                 label 'built-in'
-                 customWorkspace '/mnt/Terraform'
-                }
-            }
 
 steps {
       sh """ terraform init
