@@ -12,9 +12,12 @@ stages {
 stage ("Terraform") {
 
 steps {
+    dir ('/mnt/Terraform') {
+        
       sh """ terraform init
              terraform plan
              terraform apply --auto-approve"""
+}
 }
 }
 }
