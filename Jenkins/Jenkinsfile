@@ -4,7 +4,7 @@ pipeline {
 
        environment {
 
-       AWS_CREDENTIALS = credentials("AWS_Credentials_id")
+       AWS_CREDENTIALS = credentials("AWS_credentials_id")
 
        }
 
