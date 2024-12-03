@@ -1,0 +1,24 @@
+pipeline {
+
+       agent any 
+
+       environment {
+
+       AWS_CREDENTIALS = credentials("AWS_Credentials_id")
+
+       }
+
+       stages{
+
+       stage("Terraform") {
+
+       steps {
+
+        sh """ terraform init
+	       terraform plan
+	       terraform apply --auto-approve """
+
+	       }
+	       }
+	       }
+	       }
