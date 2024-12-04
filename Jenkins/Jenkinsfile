@@ -29,7 +29,6 @@ pipeline {
        dir('/var/lib/jenkins/workspace/Test1/Jenkins') {
 
         sh """ terraform init
-	       terraform refresh
 	       terraform plan
 	       terraform apply --auto-approve """
 
