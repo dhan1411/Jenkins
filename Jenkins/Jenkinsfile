@@ -14,7 +14,7 @@ pipeline {
 
        steps {
              
-	     git_url : https://github.com/dhan1411/jenkins.git , branch : main
+	     git branch: 'main', url: 'https://github.com/dhan1411/jenkins.git'
 
        }
 
