@@ -19,4 +19,25 @@ resource "aws_instance" "server" {
 
 }
 
+resource "aws_security_group" "sg" {
+
+    vpc_id = var.vpc_id
+
+    tags = {
+
+        Name = "Security_Group"
+    }
+  
+}
+
+
+resource "aws_vpc_security_group_ingress_rule" "for_ssh" {
+  security_group_id = aws_security_group.sg.id
+  cidr_ipv4         = "0.0.0.0/0"
+  from_port         = 22
+  ip_protocol       = "tcp"
+  to_port           = 22
+}
+
+
 
