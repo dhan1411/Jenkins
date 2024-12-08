@@ -2,8 +2,6 @@ module "vpc" {
 
     source =  "./vpc"
 
-}
-
 
 module "ec2" {
 
