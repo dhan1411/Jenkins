@@ -17,6 +17,8 @@ resource "aws_instance" "server" {
 
    }
 
+   user_data = "${file("ec2_instance/user-data-dbinstall.sh")}"
+
 
 }
 
