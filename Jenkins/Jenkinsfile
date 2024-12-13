@@ -1,6 +1,12 @@
 pipeline {
 
-  agent any
+  agent {
+	  node {
+		  lable 'built-in'
+		  customWorkspace '/mnt'
+
+	  }
+  }
 
 
 
@@ -22,7 +28,8 @@ pipeline {
 
        }
 
-       stage("Terraform") {
+      /* 
+      stage("Terraform") {
 
        steps {
 
@@ -35,5 +42,6 @@ pipeline {
 	       }
 	       }
 	       }
+	       */
 	       }
 	       }
